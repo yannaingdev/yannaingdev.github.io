@@ -4,20 +4,22 @@
 
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
 	</head>
 	<body>
-		<main style="max-width: 640px; margin: 2rem auto; padding: 0 1rem; font-family: system-ui, -apple-system, sans-serif; line-height: 1.6;">
-			<h1 style="margin-bottom: 1rem;">Astro</h1>
-			<p style="margin-bottom: 1.5rem;">Welcome! Read the latest note:</p>
-			<ul>
-				<li><a href="/notes/file-upload/">Designing a Resilient Multi-file Upload System</a></li>
-			</ul>
-		</main>
+    <main style="max-width: 640px; margin: 2rem auto; padding: 0 1rem; font-family: system-ui, -apple-system, sans-serif; line-height: 1.6;">
+      <h1 style="margin-bottom: 1rem;">Astro</h1>
+      <p style="margin-bottom: 1.5rem;">Welcome! Read the latest note:</p>
+      <ul>
+        <li>
+          <a href={`${import.meta.env.BASE_URL}notes/file-upload/`}>Designing a Resilient Multi-file Upload System</a>
+        </li>
+      </ul>
+    </main>
 	</body>
 </html>
