@@ -1,0 +1,17 @@
+---
+import FileUploadNote from '../../content/notes/file-upload.md';
+const { frontmatter } = FileUploadNote;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{frontmatter?.title ?? 'File upload note'}</title>
+  </head>
+  <body>
+    <main style="max-width: 720px; margin: 2rem auto; padding: 0 1rem; font-family: system-ui, -apple-system, sans-serif; line-height: 1.6;">
+      <p style="margin: 0 0 1rem 0;"><a href="/">← Back to home</a></p>
+      <FileUploadNote />
+    </main>
+  </body>
+</html>
