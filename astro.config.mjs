@@ -3,7 +3,8 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  // GitHub Pages project site: https://yn-developer.github.io/yannaing.github.io/
-  site: "https://yn-developer.github.io/yannaing.github.io",
-  base: "/yannaing.github.io",
+  // GitHub Pages user site: https://yannaingdev.github.io
+  site: "https://yannaingdev.github.io",
+  // User/organization pages use empty base
+  base: "",
 });
