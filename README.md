@@ -1,6 +1,6 @@
-# yannaing.github.io
+Live Site:
+https://yn-developer.github.io/
 
-Personal site built with the Astro Starter Kit (Minimal).
 
 ## 🚀 Project Structure
 

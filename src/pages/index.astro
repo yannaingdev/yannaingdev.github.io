@@ -7,19 +7,468 @@
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href={`${import.meta.env.BASE_URL}assets/css/vertical-timeline.css`}
+      />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Yan Naing</title>
 	</head>
 	<body>
-    <main style="max-width: 640px; margin: 2rem auto; padding: 0 1rem; font-family: system-ui, -apple-system, sans-serif; line-height: 1.6;">
-      <h1 style="margin-bottom: 1rem;">Astro</h1>
-      <p style="margin-bottom: 1.5rem;">Welcome! Read the latest note:</p>
-      <ul>
+    <section class="main-section">
+      <div class="main-container">
+        <header>
+          <a href="#" class="name">Yan Naing</a>
+          <nav>
+            <ul>
+              <!-- <li><a href="#">Home</a></li> -->
+              <li>
+                <a href={`${import.meta.env.BASE_URL}notes/file-upload/`}>
+                  Tech Notes
+                </a>
+              </li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#work">Work</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <!-- <li><a href="#contact">Contact</a></li> -->
+            </ul>
+          </nav>
+        </header>
+        <main>
+          <div class="left-side">
+            <div class="left-side-text">
+              <h1 class="headline">Hey&#39; i am Yan Naing</h1>
+              <h3 class="sub-headline">
+                A Versatile Software Engineer focused on JavaScript, Go, Cloud-Native, and modern
+                web architecture.
+              </h3>
+              <p class="intro-text">
+                I explore and build across the full web stack — from thoughtful UI to resilient
+                backend services. Experienced Software Engineer with a background accorss diverse
+                domains.
+              </p>
+              <a href="#work" class="btn">View My Works</a>
+              <a href="#about" class="btn-contact">Contact Me</a>
+            </div>
+            <div class="main-content">
+              <div class="content-item">
+                <p>Experience</p>
+                <h3>8+ Years</h3>
+              </div>
+              <div class="content-item">
+                <p>Location</p>
+                <h3>Bangkok,Thailand</h3>
+              </div>
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="skill-grid" aria-label="Skill cards">
+              <div class="card-skill-hero core">
+                <p class="label">Full Stack</p>
+                <p class="meta">JS / Node / Cloud</p>
+                <span class="tier">Web-Architecture</span>
+                <div class="dots">
+                  <span class="dot filled"></span><span class="dot filled"></span
+                  ><span class="dot filled"></span><span class="dot filled"></span
+                  ><span class="dot filled"></span>
+                </div>
+              </div>
+              <div class="card-skill-hero accent">
+                <p class="label">React/NextJs</p>
+                <span class="tier">Frontend</span>
+                <div class="dots">
+                  <span class="dot filled"></span><span class="dot filled"></span
+                  ><span class="dot filled"></span><span class="dot filled"></span
+                  ><span class="dot"></span>
+                </div>
+              </div>
+              <div class="card-skill-hero">
+                <p class="label">NodeJs/Nest</p>
+                <span class="tier">Backend</span>
+                <div class="dots">
+                  <span class="dot filled"></span><span class="dot filled"></span
+                  ><span class="dot filled"></span><span class="dot filled"></span
+                  ><span class="dot"></span>
+                </div>
+              </div>
+              <div class="card-skill-hero">
+                <p class="label">MongoDB/MySQL</p>
+                <span class="tier">Database</span>
+                <div class="dots">
+                  <span class="dot filled"></span><span class="dot filled"></span
+                  ><span class="dot filled"></span><span class="dot filled"></span
+                  ><span class="dot"></span>
+                </div>
+              </div>
+              <div class="card-skill-hero">
+                <p class="label">Docker/Kubernetes</p>
+                <span class="tier">Cloud-Native</span>
+                <div class="dots">
+                  <span class="dot filled"></span><span class="dot filled"></span
+                  ><span class="dot filled"></span><span class="dot filled"></span
+                  ><span class="dot"></span>
+                </div>
+              </div>
+            </div>
+            <p class="skill-grid-description">Go&#45;To Core Stack</p>
+          </div>
+        </main>
+      </div>
+    </section>
+    <hr />
+    <section class="work-experience-section" id="work">
+      <div class="work-experience-container">
+        <div class="section-heading">Job Experience</div>
+        <div id="vt6">
+          <div data-vtdate="May 2015" class="custom-timeline-content">
+            <h3>Systems Engineer</h3>
+            <h4>Firsttel Tech Pte Ltd (Singapore)</h4>
+            <p>
+              Provisioning and administration of Linux based Server, Ubuntu and Microsoft Windows
+              Server. Microsoft Windows Server Active Directory and Microsoft Exchange Server
+              Administration. Installation and configuring of various Server Systems based on VMware
+              vSphere and Hyper-V
+            </p>
+          </div>
+          <div data-vtdate="Dec 2016" class="custom-timeline-content">
+            <h3>Software Engineer</h3>
+            <h4>Hope Technik Pte Ltd (Singapore)</h4>
+            <p>
+              Developed and maintained mission-critical software systems on Linux platforms,
+              utilizing shell scripting to streamline automation and system operations. Led
+              end-to-end software testing for Automated Guided Vehicle (AGV) systems, ensuring
+              production stability and minimizing operational disruptions.
+            </p>
+          </div>
+          <div data-vtdate="Mar 2018" class="custom-timeline-content">
+            <h3>IT Manager</h3>
+            <h4>Roche Myanmar Diagnostics (Myanmar)</h4>
+            <p>
+              Led affiliate IT operations, overseeing infrastructure, system integration, and
+              cross-functional technical support. Served as Project Lead for the launch of Tissue
+              Diagnostics digital products in Myanmar and coordinated HIS–LIS integrations with
+              public and private hospitals, including YGH. Managed SharePoint administration, IT
+              budget planning, asset management, and delivery of IT training across business units.
+            </p>
+          </div>
+          <div data-vtdate="January 2022" class="custom-timeline-content">
+            <h3>Freelance Full Stack Engineer</h3>
+            <h4>Freelancing</h4>
+            <p>
+              Delivered end-to-end web applications from architecture to production deployment.
+              Built Plannywork, a job management platform with RESTful APIs and geolocation-based
+              KeyAccount mapping, and Goldshop, a full-stack e-commerce system with secure
+              authentication and inventory workflows. Managed backend integration, database design,
+              and Linux-based deployment to ensure reliable production performance.
+            </p>
+          </div>
+          <div data-vtdate="June 2024" class="custom-timeline-content">
+            <h3>Technical Solutions Consultant</h3>
+            <h4>Ezpet Pte Ltd (Myanmar)</h4>
+            <p>
+              Translated business requirements into technical specifications and collaborated with
+              engineering teams on solution design and implementation. Contributed to architecture
+              discussions, API integration planning, and deployment coordination. Provided
+              client-facing technical consultation while supporting backend integration and
+              successful solution delivery.
+            </p>
+          </div>
+          <div data-vtdate="Jan 2026" class="custom-timeline-content">
+            <h3>Open for Hire:</h3>
+            <h4>Following positions are preferred</h4>
+            <p>Fullstack Engineer Position</p>
+            <p>Mid-Level Backend Engineer</p>
+            <p>Frontend-Leaning Backend Position</p>
+          </div>
+        </div>
+        <!-- End vt6 -->
+      </div>
+    </section>
+    <section class="skills-section" id="skills">
+      <div class="skills-container">
+        <h2>CornerStone and Skills I've Acquired</h2>
+        <div class="programming-language">
+          <div class="skill-grid" aria-label="Skill cards">
+            <div class="card-skill core">
+              <p class="label">Full Stack</p>
+              <p class="meta">JS / Node / Cloud</p>
+              <span class="tier">Mid-Level</span>
+              <div class="dots">
+                <span class="dot filled"></span><span class="dot filled"></span
+                ><span class="dot filled"></span><span class="dot filled"></span
+                ><span class="dot filled"></span>
+              </div>
+            </div>
+            <div class="card-skill accent">
+              <p class="label">React/NextJS</p>
+              <span class="tier">Mid-Level</span>
+              <div class="dots">
+                <span class="dot filled"></span><span class="dot filled"></span
+                ><span class="dot filled"></span><span class="dot filled"></span
+                ><span class="dot"></span>
+              </div>
+            </div>
+            <div class="card-skill">
+              <p class="label">PWA</p>
+              <span class="tier">Mid-Level</span>
+              <div class="dots">
+                <span class="dot filled"></span><span class="dot filled"></span
+                ><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+              </div>
+            </div>
+            <div class="card-skill">
+              <p class="label">NodeJS/NestJS</p>
+              <span class="tier">Mid-Level</span>
+              <div class="dots">
+                <span class="dot filled"></span><span class="dot filled"></span
+                ><span class="dot filled"></span><span class="dot filled"></span
+                ><span class="dot"></span>
+              </div>
+            </div>
+            <div class="card-skill">
+              <p class="label">Git</p>
+              <span class="tier">Mid-Level</span>
+              <div class="dots">
+                <span class="dot filled"></span><span class="dot filled"></span
+                ><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+              </div>
+            </div>
+            <div class="card-skill">
+              <p class="label">MongoDB/MySQL</p>
+              <span class="tier">Mid-Level</span>
+              <div class="dots">
+                <span class="dot filled"></span><span class="dot filled"></span
+                ><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+              </div>
+            </div>
+            <div class="card-skill">
+              <p class="label">Bash/Shell</p>
+              <span class="tier">Mid-Level</span>
+              <div class="dots">
+                <span class="dot filled"></span><span class="dot filled"></span
+                ><span class="dot filled"></span><span class="dot filled"></span
+                ><span class="dot"></span>
+              </div>
+            </div>
+            <div class="card-skill accent">
+              <p class="label">Linux</p>
+              <span class="tier">Senior</span>
+              <div class="dots">
+                <span class="dot filled"></span><span class="dot filled"></span
+                ><span class="dot filled"></span><span class="dot filled"></span
+                ><span class="dot filled"></span>
+              </div>
+            </div>
+            <div class="card-skill">
+              <p class="label">Docker &amp; Kubernetes</p>
+              <span class="tier">Mid-Level</span>
+              <div class="dots">
+                <span class="dot filled"></span><span class="dot filled"></span
+                ><span class="dot filled"></span><span class="dot filled"></span
+                ><span class="dot"></span>
+              </div>
+            </div>
+            <div class="card-skill">
+              <p class="label">Python(odoo)</p>
+              <span class="tier">Mid-Level</span>
+              <div class="dots">
+                <span class="dot filled"></span><span class="dot filled"></span
+                ><span class="dot filled"></span><span class="dot filled"></span
+                ><span class="dot"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="frameworks"></div>
+      </div>
+    </section>
+    <hr />
+    <section class="projects-section" id="projects">
+      <div class="projects-container">
+        <h4>Some of the Projects I have Built</h4>
+        <div class="projects-grid">
+          <article
+            class="project-card"
+            data-images="./assets/project1_home.png, ./assets/project1_addJob.png, ./assets/project1_jobList.png, ./assets/project1_keyAccountsMap.png"
+          >
+            <div class="project-media">
+              <img src="./assets/project1_home.png" alt="PlannyWork project overview" />
+            </div>
+            <div class="project-body">
+              <p class="project-subtitle">Jobsheet Management System</p>
+              <h3 class="project-title">PlannyWork</h3>
+              <p class="project-summary">
+                Full-stack field operations platform with Next.js dashboard and Node/Express API,
+                handling job dispatch, session-based auth, and KeyAccount site coordination.
+              </p>
+              <div class="project-tech">
+                <span class="tech-chip">NextJS</span>
+                <span class="tech-chip">NodeJS</span>
+                <span class="tech-chip">Zustand</span>
+                <span class="tech-chip">React Query</span>
+                <span class="tech-chip">MongoDB</span>
+              </div>
+            </div>
+          </article>
+          <article
+            class="project-card"
+            data-images="./assets/project2.png, ./assets/project2_filter.png, ./assets/project2_datatable.png, ./assets/project2_owner.png"
+          >
+            <div class="project-media">
+              <img src="./assets/project2.png" alt="UPhoeSin GoldShop overview" />
+            </div>
+            <div class="project-body">
+              <p class="project-subtitle">Jewellery Store</p>
+              <h3 class="project-title">UPhoeSin GoldShop</h3>
+              <p class="project-summary">
+                E-commerce experience with streamlined catalog browsing, wishlist, and PWA support
+                for offline-ready engagement.
+              </p>
+              <div class="project-tech">
+                <span class="tech-chip">NextJS</span>
+                <span class="tech-chip">NodeJS</span>
+                <span class="tech-chip">Zustand</span>
+                <span class="tech-chip">React Query</span>
+                <span class="tech-chip">PWA (Serwist)</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="gallery-modal" id="gallery-modal" aria-hidden="true">
+          <div class="gallery-backdrop"></div>
+          <div class="gallery-dialog" role="dialog" aria-modal="true" aria-label="Project gallery">
+            <button class="gallery-close" aria-label="Close gallery">&times;</button>
+            <div class="gallery-main">
+              <img src="" alt="Project image" id="gallery-main-img" />
+            </div>
+            <div class="gallery-thumbs" id="gallery-thumbs" role="list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <section class="about-section" id="about">
+      <div class="about-container">
+        <div class="circle-container">
+          <div class="circle">
+            <div class="about-photo"></div>
+            <div class="text">
+              <p>* H I R E --> Versatile Software Engineer</p>
+            </div>
+          </div>
+        </div>
+        <h2>Yan Naing</h2>
+        <h4>Full-Stack Developer</h4>
+        <p>
+          I love diving into computer science and emergining technologies. A Full time Web Developer
+          with a diverse backgound with experience across various domains, Healthcare to Robotics.
+        </p>
+        <div class="contact-detail">
+          <p>&#9993; as.yannainghtun@gmail.com</p>
+          <p>&#9742; <a href="tel:0966507126">0966507126</a></p>
+          <p>&#x1F4CD; Bangkok, Thailand</p>
+        </div>
+        <!-- <a class="btn" href="#contact">Contact Me</a> -->
+      </div>
+    </section>
+    <hr />
+    <!--  <section class="contact-section" id="contact">
+      <div class="contact-container">
+        <div class="card">
+          <img class="card-img" src="./assets/contact_photo.png" />
+          <div class="card-content">
+            <h3>Yan Naing</h3>
+            <div>
+              <p>as.yannainghtun@gmail.com</p>
+              <p>0966507126</p>
+              <p>Bangkok,Thailand</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- <a href="#" class="scrollToTop">Top</a> -->
+    <footer class="site-footer">
+      <p>&copy; 2026 Yan Naing. All rights reserved.</p>
+    </footer>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script defer src={`${import.meta.env.BASE_URL}js/vertical-timeline.js`} is:inline></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        if (typeof window.$?.fn.verticalTimeline === "function") {
+          $("#vt6").verticalTimeline({ animate: "slide" });
+        } else {
+          console.warn("verticalTimeline plugin not loaded");
+        }
+      });
+    </script>
+    <script>
+      const text = document.querySelector(".text p");
+      text.innerHTML = text.innerText
+        .split("")
+        .map((char, i) => `<span style="transform: rotate(${i * 8.1}deg)">${char}</span>`)
+        .join("");
+    </script>
+    <script>
+      (function () {
+        const modal = document.getElementById("gallery-modal");
+        const mainImg = document.getElementById("gallery-main-img");
+        const thumbs = document.getElementById("gallery-thumbs");
+        const closeBtn = modal?.querySelector(".gallery-close");
+        const backdrop = modal?.querySelector(".gallery-backdrop");
+
+        function openGallery(images) {
+          if (!modal || !mainImg || !thumbs) return;
+          thumbs.innerHTML = "";
+          images.forEach((src, idx) => {
+            const thumb = document.createElement("button");
+            thumb.className = "gallery-thumb";
+            thumb.setAttribute("aria-label", `Project image ${idx + 1}`);
+            thumb.innerHTML = `<img src=\"${src}\" alt=\"Project thumbnail ${idx + 1}\" />`;
+            thumb.addEventListener("click", () => setActive(src, thumb));
+            thumbs.appendChild(thumb);
+            if (idx === 0) setActive(src, thumb);
+          });
+          modal.classList.add("open");
+          modal.setAttribute("aria-hidden", "false");
+        }
+
+        function setActive(src, thumbEl) {
+          mainImg.src = src;
+          thumbs.querySelectorAll(".gallery-thumb").forEach((el) => el.classList.remove("active"));
+          thumbEl.classList.add("active");
+        }
+
+        function closeGallery() {
+          if (!modal) return;
+          modal.classList.remove("open");
+          modal.setAttribute("aria-hidden", "true");
+        }
+
+        document.querySelectorAll(".project-card").forEach((card) => {
+          const imagesAttr = card.getAttribute("data-images");
+          if (!imagesAttr) return;
+          const images = imagesAttr
+            .split(",")
+            .map((s) => s.trim())
+            .filter(Boolean);
+          card.addEventListener("click", () => openGallery(images));
+        });
+
+        closeBtn?.addEventListener("click", closeGallery);
+        backdrop?.addEventListener("click", closeGallery);
+        document.addEventListener("keyup", (e) => {
+          if (e.key === "Escape") closeGallery();
+        });
+      })();
+    </script>
+	</body>
+</html>
+
+     <!--  <ul>
         <li>
           <a href={`${import.meta.env.BASE_URL}notes/file-upload/`}>Designing a Resilient Multi-file Upload System</a>
         </li>
-      </ul>
-    </main>
-	</body>
-</html>
+      </ul> -->
