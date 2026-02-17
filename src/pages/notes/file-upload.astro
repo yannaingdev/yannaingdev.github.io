@@ -7,11 +7,87 @@ const { frontmatter } = FileUploadNote;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{frontmatter?.title ?? 'File upload note'}</title>
+    <style>
+      :root {
+        --bg: #0f141b;
+        --panel: #0b1016;
+        --border: rgba(9, 173, 237, 0.35);
+        --accent: #09aded;
+        --text: #f4f7fb;
+        --muted: rgba(244, 247, 251, 0.75);
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Fredoka", system-ui, -apple-system, sans-serif;
+      }
+      main {
+        max-width: 840px;
+        margin: 2.5rem auto 3rem;
+        padding: 0 1.4rem;
+      }
+      .back {
+        display: inline-flex;
+        gap: 0.35rem;
+        align-items: center;
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.45), 0 0 0 12px rgba(9, 173, 237, 0.06);
+        border-radius: 14px;
+        padding: 1.6rem 1.8rem;
+      }
+      h1 {
+        margin: 0 0 0.6rem;
+        font-size: clamp(1.8rem, 2vw + 1rem, 2.3rem);
+        letter-spacing: 0.4px;
+      }
+      h2, h3 {
+        margin-top: 1.6rem;
+        margin-bottom: 0.6rem;
+        letter-spacing: 0.2px;
+      }
+      p {
+        margin: 0 0 1rem;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+      ul {
+        padding-left: 1.2rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      ul li + li {
+        margin-top: 0.35rem;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.2rem 0.65rem;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        color: var(--accent);
+        font-size: 0.9rem;
+        background: rgba(9, 173, 237, 0.08);
+        margin-bottom: 0.9rem;
+      }
+    </style>
   </head>
   <body>
-    <main style="max-width: 720px; margin: 2rem auto; padding: 0 1rem; font-family: system-ui, -apple-system, sans-serif; line-height: 1.6;">
-      <p style="margin: 0 0 1rem 0;"><a href={import.meta.env.BASE_URL}>← Back to home</a></p>
-      <FileUploadNote />
+    <main>
+      <a class="back" href={import.meta.env.BASE_URL}>← Back to home</a>
+      <article class="card">
+        <div class="eyebrow">Tech Note</div>
+        <h1>{frontmatter?.title ?? 'File upload note'}</h1>
+        <FileUploadNote />
+      </article>
     </main>
   </body>
 </html>

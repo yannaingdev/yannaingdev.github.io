@@ -1,0 +1,18 @@
+@use './colorVariables' as *;
+
+@mixin headerStyles($max-width, $width) {
+    position: relative;
+    max-width: $max-width;
+    font-size: 1.5rem;
+    font-weight: 400;
+    &::after {
+        position: absolute;
+        content: "";
+        width: $width;
+        height: 2px;
+        inset: 0;
+        margin: auto;
+        margin-right: 30px;
+        background-color: $white;
+    }
+}
