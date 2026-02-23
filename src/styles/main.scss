@@ -69,6 +69,7 @@ hr {
     header {
       padding: 2rem 0;
       display: flex;
+      align-items: center;
       justify-content: space-between;
       .name {
         font-size: 1.3rem;
@@ -76,13 +77,18 @@ hr {
       nav {
         ul {
           display: flex;
+          gap: 12px;
           li {
             list-style-type: none;
+            & + li {
+              border-left: 1px solid rgba(9, 173, 237, 0.45);
+              padding-left: 12px;
+            }
             a {
-              margin: 0 auto;
-              padding: 0.7rem;
+              margin: 0;
+              padding: 0.7rem 0.9rem;
               display: block;
-              width: 110px;
+              width: auto;
               text-align: center;
               &:hover {
                 border-bottom: 1.5px solid #09aded;
@@ -318,10 +324,12 @@ hr {
       }
       .gallery-dialog {
         width: 95vw;
-        padding: 0.9rem;
+        padding: 1rem 1.05rem 0.9rem;
+        max-height: 88vh;
+        overflow: auto;
       }
       .gallery-main {
-        height: 45vh;
+        height: 40vh;
       }
       .gallery-thumbs {
         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
@@ -673,21 +681,29 @@ hr {
       box-shadow:
         0 18px 36px rgba(0, 0, 0, 0.6),
         0 0 0 14px rgba(9, 173, 237, 0.08);
-      padding: 1rem 1.25rem 1rem;
+      padding: 1.15rem 1.25rem 1rem;
       z-index: 1;
       display: grid;
       gap: 0.75rem;
+      max-height: 90vh;
+      overflow: auto;
     }
     .gallery-close {
-      position: absolute;
-      top: 10px;
-      right: 12px;
-      background: none;
-      border: none;
+      position: sticky;
+      top: 6px;
+      margin-left: auto;
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(9, 173, 237, 0.45);
       color: $white;
       font-size: 1.6rem;
       cursor: pointer;
       line-height: 1;
+      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      z-index: 2;
     }
     .gallery-main {
       width: 100%;
