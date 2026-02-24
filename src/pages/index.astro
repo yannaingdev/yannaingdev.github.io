@@ -130,8 +130,7 @@ import "../styles/main.scss";
         <div class="section-heading">Job Experience</div>
         <div id="vt6">
           <div data-vtdate="Jan 2026" class="custom-timeline-content">
-            <h3>Open for Hire:</h3>
-            <h4>Following positions are preferred</h4>
+            <h3>Open to Opportunities In</h3>
             <p>Fullstack Engineer Position</p>
             <p>Mid-Level Backend Engineer</p>
             <p>Frontend-Leaning Backend Position</p>
@@ -194,6 +193,77 @@ import "../styles/main.scss";
         <!-- End vt6 -->
       </div>
     </section>
+    <section class="projects-section" id="projects">
+      <div class="projects-container">
+        <h4>Some of the Projects I have Built</h4>
+        <div class="projects-grid">
+          <article
+            class="project-card"
+            data-images="./assets/project1_home.png, ./assets/project1_addJob.png, ./assets/project1_jobList.png, ./assets/project1_keyAccountsMap.png"
+          >
+            <div class="project-media">
+              <img src="./assets/project1_home.png" alt="PlannyWork project overview" />
+            </div>
+            <div class="project-body">
+              <p class="project-subtitle">Jobsheet Management System</p>
+              <h3 class="project-title">PlannyWork</h3>
+              <p class="project-summary">
+                Full-stack field operations platform with Next.js dashboard and Node/Express API,
+                handling job dispatch, session-based auth, and KeyAccount site coordination.
+              </p>
+              <div class="project-tech">
+                <span class="tech-chip">NextJS</span>
+                <span class="tech-chip">NodeJS</span>
+                <span class="tech-chip">Zustand</span>
+                <span class="tech-chip">React Query</span>
+                <span class="tech-chip">MongoDB</span>
+                <a
+                  class="tech-chip github-chip"
+                  href="https://github.com/yannaingdev/plannywork-backend"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub Repo</a
+                >
+              </div>
+            </div>
+          </article>
+          <article
+            class="project-card"
+            data-images="./assets/project2.png, ./assets/project2_filter.png, ./assets/project2_datatable.png, ./assets/project2_owner.png"
+          >
+            <div class="project-media">
+              <img src="./assets/project2.png" alt="UPhoeSin GoldShop overview" />
+            </div>
+            <div class="project-body">
+              <p class="project-subtitle">Jewellery Store</p>
+              <h3 class="project-title">UPhoeSin GoldShop</h3>
+              <p class="project-summary">
+                E-commerce experience with streamlined catalog browsing, wishlist, and PWA support
+                for offline-ready engagement.
+              </p>
+              <div class="project-tech">
+                <span class="tech-chip">NextJS</span>
+                <span class="tech-chip">NodeJS</span>
+                <span class="tech-chip">Zustand</span>
+                <span class="tech-chip">React Query</span>
+                <span class="tech-chip">PWA (Serwist)</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="gallery-modal" id="gallery-modal" aria-hidden="true">
+          <div class="gallery-backdrop"></div>
+          <div class="gallery-dialog" role="dialog" aria-modal="true" aria-label="Project gallery">
+            <button class="gallery-close" aria-label="Close gallery">&times;</button>
+            <div class="gallery-main">
+              <img src="" alt="Project image" id="gallery-main-img" />
+            </div>
+            <div class="gallery-thumbs" id="gallery-thumbs" role="list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
     <section class="skills-section" id="skills">
       <div class="skills-container">
         <h2>Core Skills</h2>
@@ -293,77 +363,7 @@ import "../styles/main.scss";
       </div>
     </section>
     <hr />
-    <section class="projects-section" id="projects">
-      <div class="projects-container">
-        <h4>Some of the Projects I have Built</h4>
-        <div class="projects-grid">
-          <article
-            class="project-card"
-            data-images="./assets/project1_home.png, ./assets/project1_addJob.png, ./assets/project1_jobList.png, ./assets/project1_keyAccountsMap.png"
-          >
-            <div class="project-media">
-              <img src="./assets/project1_home.png" alt="PlannyWork project overview" />
-            </div>
-            <div class="project-body">
-              <p class="project-subtitle">Jobsheet Management System</p>
-              <h3 class="project-title">PlannyWork</h3>
-              <p class="project-summary">
-                Full-stack field operations platform with Next.js dashboard and Node/Express API,
-                handling job dispatch, session-based auth, and KeyAccount site coordination.
-              </p>
-              <div class="project-tech">
-                <span class="tech-chip">NextJS</span>
-                <span class="tech-chip">NodeJS</span>
-                <span class="tech-chip">Zustand</span>
-                <span class="tech-chip">React Query</span>
-                <span class="tech-chip">MongoDB</span>
-                <a
-                  class="tech-chip github-chip"
-                  href="https://github.com/yannaingdev/plannywork-backend"
-                  target="_blank"
-                  rel="noreferrer"
-                  >GitHub Repo</a
-                >
-              </div>
-            </div>
-          </article>
-          <article
-            class="project-card"
-            data-images="./assets/project2.png, ./assets/project2_filter.png, ./assets/project2_datatable.png, ./assets/project2_owner.png"
-          >
-            <div class="project-media">
-              <img src="./assets/project2.png" alt="UPhoeSin GoldShop overview" />
-            </div>
-            <div class="project-body">
-              <p class="project-subtitle">Jewellery Store</p>
-              <h3 class="project-title">UPhoeSin GoldShop</h3>
-              <p class="project-summary">
-                E-commerce experience with streamlined catalog browsing, wishlist, and PWA support
-                for offline-ready engagement.
-              </p>
-              <div class="project-tech">
-                <span class="tech-chip">NextJS</span>
-                <span class="tech-chip">NodeJS</span>
-                <span class="tech-chip">Zustand</span>
-                <span class="tech-chip">React Query</span>
-                <span class="tech-chip">PWA (Serwist)</span>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="gallery-modal" id="gallery-modal" aria-hidden="true">
-          <div class="gallery-backdrop"></div>
-          <div class="gallery-dialog" role="dialog" aria-modal="true" aria-label="Project gallery">
-            <button class="gallery-close" aria-label="Close gallery">&times;</button>
-            <div class="gallery-main">
-              <img src="" alt="Project image" id="gallery-main-img" />
-            </div>
-            <div class="gallery-thumbs" id="gallery-thumbs" role="list"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <hr />
+    
     <section class="about-section" id="about">
       <div class="about-container">
         <div class="circle-container">
