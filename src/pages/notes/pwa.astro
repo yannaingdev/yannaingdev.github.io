@@ -2,15 +2,12 @@
 import { getCollection } from 'astro:content';
 
 const notes = await getCollection('notes');
-const entry = notes.find((n) => n.slug === 'file-upload');
-let Content: any = null;
-let title = 'Note temporarily hidden';
-
-if (entry) {
-  const rendered = await entry.render();
-  Content = rendered.Content;
-  title = entry.data.title;
+const entry = notes.find((n) => n.slug === 'pwa');
+if (!entry) {
+  throw new Error('Missing note: pwa.md');
 }
+const { Content } = await entry.render();
+const { title } = entry.data;
 ---
 <html lang="en">
   <head>
@@ -63,6 +60,7 @@ if (entry) {
         margin-bottom: 0.6rem;
         letter-spacing: 0.2px;
       }
+      /* ensure markdown content inherits accent colors */
       .note-body :global(h2) {
         color: var(--accent);
       }
@@ -105,7 +103,7 @@ if (entry) {
       <article class="card note-body">
         <div class="eyebrow">Tech Note</div>
         <h1>{title}</h1>
-        {Content ? <Content /> : <p>This note is currently hidden.</p>}
+        <Content />
       </article>
     </main>
   </body>

@@ -347,6 +347,38 @@ hr {
     }
   }
 }
+.notes-section {
+  @extend .containerStyles;
+  color: $white;
+  padding: 2rem 0;
+  .notes-container {
+    max-width: 900px;
+    width: 100%;
+    h4 {
+      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
+    }
+    .note-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.5rem;
+      li {
+        a {
+          display: block;
+          padding: 0.55rem 0;
+          color: $white;
+          border-bottom: 1px solid rgba(9, 173, 237, 0.3);
+          &:hover {
+            color: #09aded;
+            border-color: rgba(9, 173, 237, 0.6);
+          }
+        }
+      }
+    }
+  }
+}
 .about-section {
   @extend .containerStyles;
   height: fit-content;
@@ -463,7 +495,7 @@ hr {
     width: 1000px;
     color: $white;
     h2 {
-      @include headerStyles(650px, 220px);
+      @include headerStyles(450px, 300px);
     }
     .programming-language {
       margin-top: 1.5rem;
@@ -653,6 +685,13 @@ hr {
       letter-spacing: 0.3px;
       color: $white;
       box-shadow: 0 0 10px rgba(9, 173, 237, 0.18);
+      text-decoration: none;
+      &.github-chip {
+        border-color: #f7d046;
+        background: rgba(247, 208, 70, 0.14);
+        color: #fbe79a;
+        box-shadow: 0 0 14px rgba(247, 208, 70, 0.28);
+      }
     }
     /* Gallery modal */
     .gallery-modal {

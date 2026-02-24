@@ -1,0 +1,95 @@
+---
+import { getCollection } from 'astro:content';
+
+const notes = (await getCollection('notes')).map((note) => ({
+  title: note.data.title,
+  href: `${import.meta.env.BASE_URL}notes/${note.slug}/`,
+}));
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Tech Notes</title>
+    <style>
+      :root {
+        --bg: #0f141b;
+        --panel: #0b1016;
+        --border: rgba(9, 173, 237, 0.35);
+        --accent: #09aded;
+        --text: #f4f7fb;
+        --muted: rgba(244, 247, 251, 0.75);
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Fredoka", system-ui, -apple-system, sans-serif;
+      }
+      main {
+        max-width: 900px;
+        margin: 2.5rem auto 3rem;
+        padding: 0 1.4rem;
+      }
+      a.back {
+        display: inline-flex;
+        gap: 0.35rem;
+        align-items: center;
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+      }
+      h1 {
+        margin: 0 0 1rem;
+        font-size: clamp(1.9rem, 2vw + 1rem, 2.4rem);
+        letter-spacing: 0.3px;
+      }
+      .list {
+        display: grid;
+        gap: 0.9rem;
+      }
+      .note-card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 1rem 1.2rem;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4), 0 0 0 10px rgba(9, 173, 237, 0.06);
+        transition: border-color 160ms ease, transform 160ms ease;
+      }
+      .note-card a {
+        color: var(--text);
+        text-decoration: none;
+        display: block;
+      }
+      .note-card strong {
+        display: block;
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+      }
+      .note-card small {
+        color: var(--muted);
+      }
+      .note-card:hover {
+        transform: translateY(-2px);
+        border-color: rgba(9, 173, 237, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="back" href={import.meta.env.BASE_URL}>← Back to home</a>
+      <h1>Tech Notes</h1>
+      <div class="list">
+        {notes.map((note) => (
+          <div class="note-card">
+            <a href={note.href}>
+              <strong>{note.title}</strong>
+              <small>Read note</small>
+            </a>
+          </div>
+        ))}
+      </div>
+    </main>
+  </body>
+</html>
