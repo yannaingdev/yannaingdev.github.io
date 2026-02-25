@@ -941,9 +941,26 @@ hr {
         justify-content: space-between;
         nav {
           ul {
+            gap: 8px;
             li:nth-of-type(1) {
               display: none;
               // background-color: red;
+            }
+            li + li {
+              border-left: none;
+              padding-left: 14px;
+              position: relative;
+            }
+            li + li::before {
+              content: "";
+              position: absolute;
+              left: 4px;
+              top: 50%;
+              width: 2px;
+              height: 18px;
+              background: rgba(9, 173, 237, 0.65);
+              transform: translateY(-50%) rotate(-16deg);
+              border-radius: 2px;
             }
           }
         }
