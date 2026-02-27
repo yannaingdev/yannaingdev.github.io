@@ -291,6 +291,12 @@ hr {
   }
 }
 @media only screen and (max-width: 768px) {
+  .main-content {
+          .content-item {
+
+            font-size: 14px;
+          }
+        }
   .projects-section {
     .projects-container {
       /*  h4 {
