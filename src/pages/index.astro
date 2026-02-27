@@ -198,6 +198,52 @@ import "../styles/main.scss";
                 <span class="tech-chip">Zustand</span>
                 <span class="tech-chip">React Query</span>
                 <span class="tech-chip">PWA (Serwist)</span>
+                <a
+                  class="tech-chip github-chip"
+                  href="https://github.com/yannaingdev/gold-shop-frontend"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub Repo</a
+                >
+              </div>
+            </div>
+          </article>
+          <article
+            class="project-card"
+            data-images="./assets/project3/menu.png, ./assets/project3/cart.png, ./assets/project3/offer.png"
+          >
+            <div class="project-media">
+              <img src="./assets/project3/menu.png" alt="Cross-platform cafe menu app overview" />
+            </div>
+            <div class="project-body">
+              <p class="project-subtitle">Cross-Platform App</p>
+              <h3 class="project-title">Café Menu & Ordering (Flutter)</h3>
+              <p class="project-summary">
+                Cross-platform Flutter/Dart application delivering a café-style menu and lightweight
+                ordering flow; ships as a single codebase targeting Android, iOS, web, and desktop
+                via Material design components.
+              </p>
+              <p class="project-summary clamp" id="project3-summary">
+                UI architecture is page-based: MenuPage renders categories/products via FutureBuilder
+                + ListView, OrderPage reflects live cart state with add/remove interactions, and
+                OffersPage presents branded promos; navigation is a bottom bar inside MyHomePage
+                (lib/main.dart).
+              </p>
+              <button class="view-more-inline" type="button" data-target="project3-summary">
+                View more
+              </button>
+              <div class="project-tech">
+                <span class="tech-chip">Flutter</span>
+                <span class="tech-chip">Dart</span>
+                <span class="tech-chip">Material Design</span>
+                <span class="tech-chip">Cross-Platform</span>
+                <a
+                  class="tech-chip github-chip"
+                  href="https://github.com/yannaingdev/dining-menu-flutter"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub Repo</a
+                >
               </div>
             </div>
           </article>
@@ -387,9 +433,6 @@ import "../styles/main.scss";
         <div class="circle-container">
           <div class="circle">
             <div class="about-photo"></div>
-            <div class="text">
-              <p>* H I R E --> Versatile Software Engineer</p>
-            </div>
           </div>
         </div>
         <h2>Yan Naing</h2>
@@ -436,13 +479,6 @@ import "../styles/main.scss";
           console.warn("verticalTimeline plugin not loaded");
         }
       });
-    </script>
-    <script>
-      const text = document.querySelector(".text p");
-      text.innerHTML = text.innerText
-        .split("")
-        .map((char, i) => `<span style="transform: rotate(${i * 8.1}deg)">${char}</span>`)
-        .join("");
     </script>
     <script>
       (function () {
