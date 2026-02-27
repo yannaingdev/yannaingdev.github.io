@@ -319,7 +319,7 @@ hr {
         gap: 6px;
       }
       .tech-chip {
-        font-size: 0.8rem;
+        font-size: 0.82rem;
         padding: 5px 9px;
       }
       .gallery-dialog {
@@ -715,15 +715,19 @@ hr {
       text-decoration: underline;
     }
     .tech-chip {
-      padding: 6px 10px;
+      padding: 5px 9px;
       border-radius: 999px;
       border: 1px solid rgba(9, 173, 237, 0.4);
       background: rgba(9, 173, 237, 0.08);
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       letter-spacing: 0.3px;
       color: $white;
       box-shadow: 0 0 10px rgba(9, 173, 237, 0.18);
       text-decoration: none;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       &.github-chip {
         border-color: #f7d046;
         background: rgba(247, 208, 70, 0.14);
