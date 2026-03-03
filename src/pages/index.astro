@@ -137,13 +137,14 @@ import "../styles/main.scss";
             <div class="project-media">
               <img src="./assets/project1_db_erd_firstpage.png" alt="PlannyWork ERD and overview" />
             </div>
-            <div class="project-body">
-              <p class="project-subtitle">Jobsheet Management System</p>
-              <h3 class="project-title">PlannyWork</h3>
-              <p class="project-summary">
-                Full-stack field operations platform with Next.js dashboard and Node/Express API,
-                handling job dispatch, session-based auth, and KeyAccount site coordination.
-              </p>
+              <div class="project-body">
+                <p class="project-subtitle">Jobsheet Management System</p>
+                <h3 class="project-title">PlannyWork</h3>
+                <p class="project-role">Full Stack Developer</p>
+                <p class="project-summary">
+                  Full-stack field operations platform with Next.js dashboard and Node/Express API,
+                  handling job dispatch, session-based auth, and KeyAccount site coordination.
+                </p>
               <p class="project-summary clamp" id="plannywork-summary">
                 Next.js 14 app routes with server actions for auth/session; REST backend built with
                 Node/Express and MongoDB (GeoJSON for site mapping). File uploads via S3 presigned
@@ -176,13 +177,14 @@ import "../styles/main.scss";
             <div class="project-media">
               <img src="./assets/project2.png" alt="UPhoeSin GoldShop overview" />
             </div>
-            <div class="project-body">
-              <p class="project-subtitle">Jewellery Store</p>
-              <h3 class="project-title">UPhoeSin GoldShop</h3>
-              <p class="project-summary">
-                E-commerce experience with streamlined catalog browsing, wishlist, and PWA support
-                for offline-ready engagement.
-              </p>
+              <div class="project-body">
+                <p class="project-subtitle">Jewellery Store</p>
+                <h3 class="project-title">UPhoeSin GoldShop</h3>
+                <p class="project-role">Stack Developer</p>
+                <p class="project-summary">
+                  E-commerce experience with streamlined catalog browsing, wishlist, and PWA support
+                  for offline-ready engagement.
+                </p>
               <p class="project-summary clamp" id="goldshop-summary">
                 Next.js frontend with Serwist PWA for offline catalog; state managed via Zustand +
                 React Query caching. Backend Node/Express with MongoDB; implements cart/wishlist,
@@ -215,13 +217,14 @@ import "../styles/main.scss";
             <div class="project-media">
               <img src="./assets/project3/menu.png" alt="Cross-platform cafe menu app overview" />
             </div>
-            <div class="project-body">
-              <p class="project-subtitle">Cross-Platform App</p>
-              <h3 class="project-title">Café Menu & Ordering (Flutter)</h3>
-              <p class="project-summary">
-                Cross-platform Flutter/Dart application delivering a café-style menu and lightweight
-                ordering flow; ships as a single codebase targeting Android, iOS, web, and desktop
-                via Material design components.
+              <div class="project-body">
+                <p class="project-subtitle">Cross-Platform App</p>
+                <h3 class="project-title">Café Menu & Ordering (Flutter)</h3>
+                <p class="project-role">Mobile Developer</p>
+                <p class="project-summary">
+                  Cross-platform Flutter/Dart application delivering a café-style menu and lightweight
+                  ordering flow; ships as a single codebase targeting Android, iOS, web, and desktop
+                  via Material design components.
               </p>
               <p class="project-summary clamp" id="project3-summary">
                 UI architecture is page-based: MenuPage renders categories/products via FutureBuilder
@@ -244,6 +247,36 @@ import "../styles/main.scss";
                   rel="noreferrer"
                   >GitHub Repo</a
                 >
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-images="./assets/project4/image.png">
+            <div class="project-media">
+              <img src="./assets/project4/image.png" alt="Project 4 product preview" />
+            </div>
+            <div class="project-body">
+              <p class="project-subtitle">Consulting Delivery</p>
+              <h3 class="project-title">Product Implementation (Project 4)</h3>
+              <p class="project-role">Technical Solution Consultant</p>
+              <p class="project-summary">
+                Delivered a customer-facing product as part of a technical solutions engagement,
+                aligning stakeholder requirements with feasible architecture and rollout.
+              </p>
+              <p class="project-summary clamp" id="project4-summary">
+                Led solution design, coordinated cross-team implementation, and oversaw delivery to
+                production, including integration planning, environment readiness, and user adoption
+                support. Ensured the build met reliability and compliance needs while keeping
+                timelines on track.
+              </p>
+              <button class="view-more-inline" type="button" data-target="project4-summary">
+                View more
+              </button>
+              <div class="project-tech">
+                <span class="tech-chip">Consulting</span>
+                <span class="tech-chip">Delivery</span>
+                <span class="tech-chip">Architecture</span>
+                <span class="tech-chip">Stakeholder Mgmt</span>
+                <a class="tech-chip github-chip" href="https://site.ezypet.info/" target="_blank" rel="noreferrer">Live Site</a>
               </div>
             </div>
           </article>
@@ -465,7 +498,7 @@ import "../styles/main.scss";
         </div>
       </div>
     </section> -->
-    <!-- <a href="#" class="scrollToTop">Top</a> -->
+    <button id="scrollTopBtn" class="scrollToTop" type="button" aria-label="Back to top">↑</button>
     <footer class="site-footer">
       <p>&copy; 2026 Yan Naing. All rights reserved.</p>
     </footer>
@@ -556,6 +589,21 @@ import "../styles/main.scss";
           }
         });
       });
+      const scrollBtn = document.getElementById("scrollTopBtn");
+      if (scrollBtn) {
+        const toggleScrollBtn = () => {
+          if (window.scrollY > 280) {
+            scrollBtn.classList.add("show");
+          } else {
+            scrollBtn.classList.remove("show");
+          }
+        };
+        window.addEventListener("scroll", toggleScrollBtn, { passive: true });
+        toggleScrollBtn();
+        scrollBtn.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
     </script>
 	</body>
 </html>
